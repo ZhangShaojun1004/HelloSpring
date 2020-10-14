@@ -5,9 +5,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
- * Created by pengyuntao on 16/10/12.
- */
+
 @Controller
 //@RequestMapping(value = "/hello", method = RequestMethod.GET)
 public class HelloController {
@@ -22,6 +20,21 @@ public class HelloController {
     public String printHello1(ModelMap model) {
         model.addAttribute("msg", "Spring MVC Hello World");
         model.addAttribute("name", "hello1");
+        return "hello";
+    }
+
+
+    @RequestMapping(value = "/hello2", method = RequestMethod.GET)
+    public String printHello2(ModelMap model) {
+        model.addAttribute("msg", "Spring MVC Hello World");
+        model.addAttribute("name", "hello2");
+        return "hello";
+    }
+
+    @RequestMapping(value = "/hello3", method = RequestMethod.GET)
+    public String printHello3(ModelMap model) {
+        model.addAttribute("msg", "Spring MVC Hello World");
+        model.addAttribute("name", "hello3");
         return "hello";
     }
 
